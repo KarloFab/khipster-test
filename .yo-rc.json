@@ -1,0 +1,55 @@
+{
+  "generator-jhipster": {
+    "blueprints": [
+      {
+        "name": "generator-jhipster-kotlin",
+        "version": "1.14.0"
+      }
+    ],
+    "otherModules": [
+      {
+        "name": "generator-jhipster-kotlin",
+        "version": "1.14.0"
+      }
+    ],
+    "applicationType": "monolith",
+    "baseName": "jhipster",
+    "jhipsterVersion": "7.5.0",
+    "skipUserManagement": false,
+    "skipCheckLengthOfIdentifier": false,
+    "skipFakeData": false,
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "testFrameworks": ["cucumber"],
+    "pages": [],
+    "creationTimestamp": 1646041525577,
+    "serviceDiscoveryType": "eureka",
+    "reactive": false,
+    "authenticationType": "jwt",
+    "packageName": "com.kfabija.test",
+    "serverPort": "8080",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "buildTool": "maven",
+    "serverSideOptions": ["messageBroker:kafka"],
+    "websocket": false,
+    "searchEngine": false,
+    "messageBroker": "kafka",
+    "enableSwaggerCodegen": false,
+    "clientFramework": "angularX",
+    "withAdminUi": true,
+    "clientTheme": "cyborg",
+    "clientThemeVariant": "dark",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "jwtSecretKey": "YzQzMWE3ZWVkMmMzMTMxMzZiMjA3NDQ0NjFkNDA2NWM5YjQ2NThlN2Y3NDM0NDc2NDFjNGIyNTVkMTAzYWY1MWU1MzE0ZDIyOWI4ODc5MmVkOWZhOWEwNGNmOTEyNTJlZTRjMTEwZGVkOTJiYzA5NTZkYTQ4YjFmNmE3YjY1YzM=",
+    "devServerPort": 4200,
+    "clientPackageManager": "npm",
+    "languages": ["en", "hr"],
+    "enableGradleEnterprise": false
+  }
+}
