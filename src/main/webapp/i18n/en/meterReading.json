@@ -1,0 +1,25 @@
+{
+  "jhipsterApp": {
+    "meterReading": {
+      "home": {
+        "title": "Meter Readings",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Meter Reading",
+        "createOrEditLabel": "Create or edit a Meter Reading",
+        "notFound": "No Meter Readings found"
+      },
+      "created": "A new Meter Reading is created with identifier {{ param }}",
+      "updated": "A Meter Reading is updated with identifier {{ param }}",
+      "deleted": "A Meter Reading is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Meter Reading {{ id }}?"
+      },
+      "detail": {
+        "title": "Meter Reading"
+      },
+      "id": "ID",
+      "date": "Date",
+      "electricityConsumption": "Electricity Consumption"
+    }
+  }
+}

@@ -50,6 +50,8 @@
     "devServerPort": 4200,
     "clientPackageManager": "npm",
     "languages": ["en", "hr"],
-    "enableGradleEnterprise": false
+    "enableGradleEnterprise": false,
+    "lastLiquibaseTimestamp": 1646233587000,
+    "entities": ["MeterReading"]
   }
 }

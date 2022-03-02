@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="meterReading">
+      <h2 data-cy="meterReadingDetailsHeading"><span jhiTranslate="jhipsterApp.meterReading.detail.title">Meter Reading</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ meterReading.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterApp.meterReading.date">Date</span></dt>
+        <dd>
+          <span>{{ meterReading.date | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterApp.meterReading.electricityConsumption">Electricity Consumption</span></dt>
+        <dd>
+          <span>{{ meterReading.electricityConsumption }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/meter-reading', meterReading.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
