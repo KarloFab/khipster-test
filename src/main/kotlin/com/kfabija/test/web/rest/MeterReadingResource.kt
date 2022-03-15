@@ -143,10 +143,10 @@ class MeterReadingResource(
 
      * @return the [ResponseEntity] with status `200 (OK)` and the list of meterReadings in body.
      */
-    @GetMapping("/meter-readings")    
+    @GetMapping("/meter-readings")
     fun getAllMeterReadings(): MutableList<MeterReadingDTO> {
         log.debug("REST request to get all MeterReadings")
-        
+
         return meterReadingService.findAll()
             }
 

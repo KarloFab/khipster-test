@@ -12,10 +12,4 @@ import org.mapstruct.*
  */
 @Mapper(componentModel = "spring", uses = [])
 interface MeterReadingMapper :
-    EntityMapper<MeterReadingDTO, MeterReading> {
-
-
-
-
-
-}
+    EntityMapper<MeterReadingDTO, MeterReading>

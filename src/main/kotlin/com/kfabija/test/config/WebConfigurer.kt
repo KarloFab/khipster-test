@@ -62,7 +62,7 @@ class WebConfigurer(
      * Resolve path prefix to static resources.
      */
     private fun resolvePathPrefix(): String {
-        val fullExecutablePath = decode(this.javaClass.getResource("").path, StandardCharsets.UTF_8)
+        val fullExecutablePath = decode(this.javaClass.getResource("").path, StandardCharsets.UTF_8.name())
         val rootPath = Paths.get(".").toUri().normalize().path
         val extractedPath = fullExecutablePath.replace(rootPath, "")
         val extractionEndIndex = extractedPath.indexOf("target/")
