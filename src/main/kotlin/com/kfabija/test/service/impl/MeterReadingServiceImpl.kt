@@ -1,17 +1,15 @@
 package com.kfabija.test.service.impl
 
 
-import com.kfabija.test.service.MeterReadingService
 import com.kfabija.test.domain.MeterReading
 import com.kfabija.test.repository.MeterReadingRepository
+import com.kfabija.test.service.MeterReadingService
 import com.kfabija.test.service.dto.MeterReadingDTO
 import com.kfabija.test.service.mapper.MeterReadingMapper
 import org.slf4j.LoggerFactory
-
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import java.util.Optional
-import java.util.stream.Collectors
+import java.util.*
 
 /**
  * Service Implementation for managing [MeterReading].
@@ -19,7 +17,7 @@ import java.util.stream.Collectors
 @Service
 @Transactional
 class MeterReadingServiceImpl(
-        private val meterReadingRepository: MeterReadingRepository,
+    private val meterReadingRepository: MeterReadingRepository,
     private val meterReadingMapper: MeterReadingMapper
 ) : MeterReadingService {
 
@@ -36,10 +34,10 @@ class MeterReadingServiceImpl(
         log.debug("Request to partially update MeterReading : {}", meterReadingDTO)
 
 
-         return meterReadingRepository.findById(meterReadingDTO.id)
+        return meterReadingRepository.findById(meterReadingDTO.id)
             .map {
-meterReadingMapper.partialUpdate(it, meterReadingDTO)
-               it
+                meterReadingMapper.partialUpdate(it, meterReadingDTO)
+                it
             }
             .map { meterReadingRepository.save(it) }
             .map { meterReadingMapper.toDto(it) }
