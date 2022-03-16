@@ -31,6 +31,7 @@ import tech.jhipster.web.util.PaginationUtil
 import tech.jhipster.web.util.ResponseUtil
 import java.net.URI
 import java.net.URISyntaxException
+import java.util.*
 import javax.validation.Valid
 import javax.validation.constraints.Pattern
 
@@ -95,7 +96,7 @@ class UserResource(
         if (userDTO.id != null) {
             throw BadRequestAlertException("A new user cannot already have an ID", "userManagement", "idexists")
             // Lowercase the user login before comparing with database
-        } else if (userRepository.findOneByLogin(userDTO.login!!.toLowerCase()).isPresent) {
+        } else if (userRepository.findOneByLogin(userDTO.login!!.lowercase(Locale.getDefault())).isPresent) {
             throw LoginAlreadyUsedException()
         } else if (userRepository.findOneByEmailIgnoreCase(userDTO.email).isPresent) {
             throw EmailAlreadyUsedException()
