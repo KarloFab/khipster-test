@@ -59,7 +59,7 @@ class MeterReadingServiceImpl(
             .map(meterReadingMapper::toDto)
     }
 
-    override fun delete(id: Long): Unit {
+    override fun delete(id: Long) {
         log.debug("Request to delete MeterReading : $id")
 
         meterReadingRepository.deleteById(id)
